@@ -145,15 +145,15 @@ function fromAlphaBeta() {
         theta = 2 * Math.acos(r0);
 
         $b4 = ce('div');
-        $b4.textContent = `$$ r_0 = ${r0}, r_1 = ${r1} $$`;
+        $b4.textContent = `$$ r_0 = | \\alpha | =  ${r0}, r_1 = | \\beta | = ${r1} $$`;
         $solution.appendChild($b4);
 
         $b5 = ce('div');
-        $b5.textContent = `$$ \\phi_0 = ${f0}, \\phi_1 = ${f1} $$`;
+        $b5.textContent = `$$ \\phi_0 = \\arg(\\alpha) = ${f0}, \\phi_1 = \\arg(\\beta) = ${f1} $$`;
         $solution.appendChild($b5);
 
         $b6 = ce('div');
-        $b6.textContent = `$$ \\theta = ${theta}, \\phi = ${phi} $$`;
+        $b6.textContent = `$$ \\theta = 2 \\arccos(r_0) = ${theta}, \\phi = \\phi_1 - \\phi_0 = ${phi} $$`;
         $solution.appendChild($b6);
 
         $phi.value = phi;
@@ -231,7 +231,7 @@ function computeVariant(i) {
     $solution.appendChild($b3);
 
     const $b7 = ce('div');
-    $b7.textContent = `$$ |\\psi\\rang = cos(\\theta / 2) |0\\rang + e^{i\\phi} sin(\\theta / 2) |1\\rang = cos(${theta/2})|0\\rang + e^{i (${phi})}sin(${theta/2})|1\\rang $$`;
+    $b7.textContent = `$$ |\\psi\\rang = cos(\\theta / 2) |0\\rang + e^{i\\phi} sin(\\theta / 2) |1\\rang = cos(${theta / 2})|0\\rang + e^{i (${phi})}sin(${theta / 2})|1\\rang $$`;
     $solution.appendChild($b7);
 
     renderMathInElement(document.body);
